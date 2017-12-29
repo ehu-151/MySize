@@ -1,5 +1,6 @@
 package com.example.ehu.mysize;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -38,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
         editSleeve.setText(sleeve);
         editWaist.setText(waist);
         editInseam.setText(inseam);
+
+         findViewById(R.id.height_button).setOnClickListener(new View.OnClickListener(){
+             @Override
+             public void onClick(View view) {
+                 Intent intent = new Intent(MainActivity.this, HeightActivity.class);
+                 startActivity(intent);
+             }
+         });
     }
 
     public void onSaveTapped(View view){
